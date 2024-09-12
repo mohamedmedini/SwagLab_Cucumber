@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 		
-		tags= "@Sauce_Demo_Ahtnentification" ,
-		features= "src/test/features/LoginPage",
+		tags= "@Payment_SauceDemo" ,
+		features= "src/test/features/PaymentPage/Payement.feature",
 		glue={"Hooks","StepDefinition"},
 		
 		
@@ -20,10 +20,6 @@ import io.cucumber.junit.CucumberOptions;
 		
 		)
 
-
-
-
-
-public class RunnerAuth {
+public class Runner {
 
 }

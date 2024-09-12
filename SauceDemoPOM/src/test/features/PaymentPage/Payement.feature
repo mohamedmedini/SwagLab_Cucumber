@@ -1,4 +1,4 @@
-@Paiyment_SauceDemo
+@Payment_SauceDemo
 Feature: Payment of the product
   I want to pay the product
 
