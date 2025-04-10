@@ -9,17 +9,15 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 		
-		tags= "@Payment_SauceDemo" ,
-		features= "src/test/features/PaymentPage/Payement.feature",
-		glue={"Hooks","StepDefinition"},
-		
-		
-		publish= true,
-	    plugin ={"pretty",
-	    		"html:target/htmlreport.html","json:target/report","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
-		
-		)
-
+	tags= "@Payment_SauceDemo" ,
+	features= "src/test/features/PaymentPage/Payement.feature",
+	glue={"Hooks","StepDefinition"},
+	
+	
+	publish= true,
+    plugin ={"pretty","html:target/htmlreport.html","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm","json:target/report","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
+    
+			
 public class Runner {
 
 }

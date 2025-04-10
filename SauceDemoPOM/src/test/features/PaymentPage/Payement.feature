@@ -8,6 +8,7 @@ Feature: Payment of the product
     And I enter  password "secret_sauce"
     And I click  login button
     Then I validate  page "https://www.saucedemo.com/inventory.html"
+    
     Given Choose the first product and click add_to_cart1
     When Choose the seecond product and click add_to_cart2
     And click the cart button

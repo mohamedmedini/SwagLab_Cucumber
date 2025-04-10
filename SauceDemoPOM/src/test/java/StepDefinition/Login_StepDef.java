@@ -40,8 +40,7 @@ public class Login_StepDef {
 	public void i_validate_page(String string) {
 		Assert.assertEquals(string, log.CurrentURL());
 		System.out.println("URL obtained succefully");
-		
-	   
+		  
 	}
 
 

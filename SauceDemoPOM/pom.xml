@@ -17,77 +17,68 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
+		<allure-junit4.version>2.27.0</allure-junit4.version>
+		<allure.version>2.27.0</allure.version>
 	</properties>
-
-	
 
 
 	<dependencies>
 		<dependency>
-
 			<groupId>junit</groupId>
-
 			<artifactId>junit</artifactId>
-
 			<version>4.12</version>
-
 			<scope>test</scope>
-
 		</dependency>
 
 
 		<dependency>
-
 			<groupId>io.cucumber</groupId>
-
 			<artifactId>cucumber-junit</artifactId>
-
 			<version>7.9.0</version>
-
 			<scope>test</scope>
-
 		</dependency>
 
-
 		<dependency>
-
 			<groupId>io.cucumber</groupId>
-
 			<artifactId>cucumber-java</artifactId>
-
 			<version>7.9.0</version>
-
 		</dependency>
-		
-		<dependency>
 
+		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-
 			<artifactId>selenium-java</artifactId>
-
 			<version>2.50.1</version>
-
 		</dependency>
 
 
 		<dependency>
-
 			<groupId>io.github.bonigarcia</groupId>
-
 			<artifactId>webdrivermanager</artifactId>
-
 			<version>5.5.3</version>
-
 			<scope>test</scope>
-
 		</dependency>
-		
+
 		<!--https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>1.9.2</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-cucumber7-jvm</artifactId>
+			<version>${allure.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit4</artifactId>
+			<version>${allure-junit4.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		
 
 	</dependencies>
 
@@ -137,6 +128,8 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
+
+				
 			</plugins>
 		</pluginManagement>
 	</build>
