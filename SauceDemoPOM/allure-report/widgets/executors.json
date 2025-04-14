@@ -1,0 +1,1 @@
+[{"name":"Jenkins","type":"jenkins","url":"http://localhost:7000/","buildOrder":6,"buildName":"SauceDemoCucumber_Maven #6","buildUrl":"http://localhost:7000/job/SauceDemoCucumber_Maven/6/","reportName":"AllureReport","reportUrl":"http://localhost:7000/job/SauceDemoCucumber_Maven/6/allure"}]
