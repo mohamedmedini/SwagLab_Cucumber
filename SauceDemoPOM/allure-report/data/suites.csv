@@ -1,5 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
 "  I want to pay the product","16825","Payment with foor carts","","Mon Apr 21 11:10:02 CET 2025","passed","Mon Apr 21 11:10:19 CET 2025","","Payment of the product","Payment with foor carts",""
-"  I want to pay the product","17590","Payment with foor carts","","Mon Apr 21 11:09:28 CET 2025","passed","Mon Apr 21 11:09:45 CET 2025","","Payment of the product","Payment with foor carts",""
 "  I want to pay the product","16513","Payment with foor carts","","Mon Apr 21 11:09:45 CET 2025","passed","Mon Apr 21 11:10:02 CET 2025","","Payment of the product","Payment with foor carts",""
-"  I want to pay the product","30144","Payment with foor carts","","Mon Apr 21 11:08:57 CET 2025","broken","Mon Apr 21 11:09:27 CET 2025","","Payment of the product","Payment with foor carts",""
+"  I want to pay the product","14539","Payment with foor carts","","Mon Apr 21 12:31:18 CET 2025","passed","Mon Apr 21 12:31:33 CET 2025","","Payment of the product","Payment with foor carts",""
+"  I want to pay the product","18164","Payment with foor carts","","Mon Apr 21 12:31:00 CET 2025","passed","Mon Apr 21 12:31:18 CET 2025","","Payment of the product","Payment with foor carts",""
