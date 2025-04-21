@@ -28,5 +28,4 @@ Feature: Payment of the product
       | first name | last name | zip  |
       | mohamed    | medini    | 9030 |
       | mouadh     | zouaghi   | 1500 |
-      | maysem     | zouaghi   | 1910 |
-      | tasnim     | medini    | 5864 |
+    
