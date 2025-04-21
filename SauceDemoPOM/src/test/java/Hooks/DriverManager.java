@@ -14,7 +14,7 @@ public static WebDriver driver;
 	
 	public static WebDriver GetDriver() {
 		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
+		//driver=new ChromeDriver();
 		
 		ChromeOptions options = new ChromeOptions();
 		
