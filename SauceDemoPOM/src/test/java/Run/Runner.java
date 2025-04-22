@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 		
-	tags= "@Payment_SauceDemo" ,
+	tags= "@Payement_SauceDemo" ,
 	features= "src/test/features/PaymentPage/Payement.feature",
 	glue={"Hooks","StepDefinition"},
 	

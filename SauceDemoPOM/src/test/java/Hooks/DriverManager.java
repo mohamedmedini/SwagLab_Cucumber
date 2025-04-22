@@ -14,10 +14,8 @@ public static WebDriver driver;
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		return driver;	
-		
+		return driver;			
 	}
- 
 }
 
 // input chrome options to run github actions 

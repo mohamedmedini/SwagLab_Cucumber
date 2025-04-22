@@ -1,4 +1,4 @@
-@Payment_SauceDemo
+@Payement_SauceDemo
 Feature: Payment of the product
   I want to pay the product
 
@@ -13,8 +13,8 @@ Feature: Payment of the product
     And click the cart button
     Then verify that the two product are added successfully to my cart "Sauce Labs Backpack" and "Sauce Labs Onesie"
 
-  @Payment_with_4_cart
-  Scenario Outline: Payment with foor carts
+  @Payement_with_4_cart
+  Scenario Outline: Payment with four carts
     Given i click the checkout button
     When i enter the First Name "<first name>"
     And i enter the Last Name  "<last name>"
@@ -24,7 +24,7 @@ Feature: Payment of the product
     Then i verify the payment with the message "Thank you for your order!"
 
     Examples: 
-      | first name | last name | zip  |
+      | first name | last name | Zip  |
       | mohamed    | medini    | 9030 |
       | mouadh     | zouaghi   | 1500 |
-     
+    
