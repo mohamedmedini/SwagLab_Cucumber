@@ -25,11 +25,11 @@ public static WebDriver driver;
 	}
 	
 	
-	//@AfterStep
-	// public void TakeScreenshot(Scenario scenario) {
-	//     final byte [] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-	//     scenario.attach(screenshot,"image/png", "image");
-	//     }
+	@AfterStep
+	public void TakeScreenshot(Scenario scenario) {
+	    final byte [] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+	    scenario.attach(screenshot,"image/png", "image");
+	    }
 	
 	
 	@After
