@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverManager {
 	
@@ -20,12 +21,11 @@ public class DriverManager {
 
 // input chrome options to run github actions 
 
-//public static WebDriver driver;
+public static WebDriver driver;
 //
 public static WebDriver GetDriver() {
    if (driver == null) {
        WebDriverManager.chromedriver().setup();
-
        ChromeOptions options = new ChromeOptions();
        options.addArguments("--headless");
        options.addArguments("--disable-gpu");
