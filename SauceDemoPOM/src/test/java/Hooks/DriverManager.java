@@ -33,7 +33,7 @@ public static WebDriver GetDriver() {
        options.addArguments("--disable-dev-shm-usage");
        options.addArguments("--remote-allow-origins=*");
 
-        Generate a unique user-data-dir for each test run
+        //Generate a unique user-data-dir for each test run
        String uniqueUserDataDir = System.getProperty("java.io.tmpdir") + "/chrome-profile-" + System.nanoTime();
        new File(uniqueUserDataDir).mkdirs();  // make sure it exists
        options.addArguments("--user-data-dir=" + uniqueUserDataDir);
