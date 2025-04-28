@@ -17,6 +17,7 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
+        cache: 'maven'  # cache maven dependencies automatically
 
     - name: Install Google Chrome
       run: |
@@ -26,56 +27,22 @@ jobs:
         echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/google-linux-signing-keyring.gpg] https://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list > /dev/null
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
-       #sudo apt-get install -y allure
-
-    - name: Cache Maven packages
-      uses: actions/cache@v4
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
 
     - name: Run Cucumber Tests
       run: mvn -Dtest=Runner verify
       working-directory: SauceDemoPOM
 
-    # - name: Debug - List Allure Results
-    #   run: ls -R SauceDemoPOM/target/allure-results
-
-    # - name: Install Allure CLI
-    #   run: |
-    #     wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
-    #     tar -zxvf allure-2.27.0.tgz
-    #     sudo mv allure-2.27.0 /opt/allure
-    #     sudo ln -s /opt/allure/bin/allure /usr/bin/allure
-
-    # - name: Generate Allure Report
-    #   run: |
-    #     allure generate SauceDemoPOM/target/allure-results --clean -o SauceDemoPOM/target/allure-report
-
-    # - name: Upload Allure Report as Artifact
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: allure-report
-    #     path: SauceDemoPOM/target/allure-report
-        # Post-step to generate and publish Allure report
-
-# Post-step to install Allure CLI and generate the report
-    - name: Post-step to Generate Allure Report
-      if: always()  # Only run if previous steps were successful
+    - name: Generate Allure Report
+      if: always()  # Run even if tests fail
       run: |
         # Install Allure CLI
         wget https://github.com/allure-framework/allure2/releases/download/2.17.1/allure-2.17.1.tgz
         tar -zxvf allure-2.17.1.tgz
         sudo mv allure-2.17.1 /opt/allure
         sudo ln -s /opt/allure/bin/allure /usr/local/bin/allure
-        
+
         # Generate Allure Report
         allure generate SauceDemoPOM/target/allure-results --clean -o SauceDemoPOM/target/allure-report
-
-        # Upload the Allure Report as an artifact
-        allure open SauceDemoPOM/target/allure-report
 
     - name: Upload Allure Report as Artifact
       uses: actions/upload-artifact@v4
