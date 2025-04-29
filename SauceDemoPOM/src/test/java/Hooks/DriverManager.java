@@ -7,9 +7,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.io.File;
 
-public class DriverManager {
+ public class DriverManager {
 	
-public static WebDriver driver;
+// public static WebDriver driver;
 	
 // 	    public static WebDriver GetDriver() {
 // 		WebDriverManager.chromedriver().setup();
