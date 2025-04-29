@@ -19,17 +19,17 @@ public static WebDriver driver;
 		driver= DriverManager.GetDriver();	
 	}
 	
-	@BeforeStep
-	public static void etape () {	
-		System.out.println("etape en cour");
-	}
+	// @BeforeStep
+	// public static void etape () {	
+	// 	System.out.println("etape en cour");
+	// }
 	
 	
-	@AfterStep
-	public void TakeScreenshot(Scenario scenario) {
-	    final byte [] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-	    scenario.attach(screenshot,"image/png", "image");
-	    }
+	// @AfterStep
+	// public void TakeScreenshot(Scenario scenario) {
+	//     final byte [] screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+	//     scenario.attach(screenshot,"image/png", "image");
+	//     }
 	
 	
 	@After
