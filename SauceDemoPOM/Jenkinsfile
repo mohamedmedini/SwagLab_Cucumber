@@ -22,22 +22,20 @@ pipeline {
                 sh 'mvn -f SauceDemoPOM/pom.xml -Dtest=Runner clean verify'
             }
         }
-
-        stage('Allure Report') {
-            steps {
-                allure([
-                    includeProperties: false,
-                    jdk: 'JAVA_HOME', // Ensure JAVA_HOME is configured in Global Tool Config
-                    results: [[path: "${env.ALLURE_RESULTS}"]],
-                    reportBuildPolicy: 'ALWAYS'
-                ])
-            }
-        }
     }
 
     post {
         always {
+            // Publish test results even if tests fail
             junit 'SauceDemoPOM/target/surefire-reports/*.xml'
+            
+            // Generate Allure report always (pass or fail)
+            allure([
+                includeProperties: false,
+                jdk: 'JAVA_HOME',
+                results: [[path: "${env.ALLURE_RESULTS}"]],
+                reportBuildPolicy: 'ALWAYS'
+            ])
         }
     }
 }
